@@ -102,13 +102,13 @@ export const App: React.FC = () => {
             type="button"
             className={`todoapp__toggle-all ${toggleAllActive ? 'active' : ''}`}
             data-cy="ToggleAllButton"
-            // тут пізніше додаси логіку toggle all
+            //  toggle all
           />
 
           <form
             onSubmit={e => {
               e.preventDefault();
-              // додавання todo — буде в наступній частині
+              // додавання todo
             }}
           >
             <input
@@ -146,7 +146,7 @@ export const App: React.FC = () => {
                     className="todo__status"
                     checked={todo.completed}
                     readOnly
-                    // тут пізніше додаси onChange, який викликатиме client.patch(...)
+                    // onChange, який викликатиме client.patch(...)
                   />
                 </label>
 
@@ -158,7 +158,7 @@ export const App: React.FC = () => {
                   type="button"
                   className="todo__remove"
                   data-cy="TodoDelete"
-                  // тут пізніше додаси видалення
+                  // видалення
                 >
                   ×
                 </button>
@@ -212,7 +212,7 @@ export const App: React.FC = () => {
               className="todoapp__clear-completed"
               data-cy="ClearCompletedButton"
               disabled={completedCount === 0}
-              // onClick={() => clearCompleted()} — додати пізніше
+              // onClick={() => clearCompleted()}
             >
               Clear completed
             </button>
